@@ -1,38 +1,227 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-style: inherit;
+}
+
+h1 {
   text-align: center;
+  padding: 15px 0px;
+  font-size: 50px;
+  background-color: rgb(74, 143, 233);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input, label {
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form  div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: clamp(150px, 20vw, 800px);
+  border-radius: 12px;
+  background-color: #E5E9F0;
+}
+
+form > div {
+  padding: 20px;
+}
+
+body {
+  background-color: #3B4252;
+}
+
+label {
+  color: #2E3440;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  color: #2E3440;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #5E81AC;
+  font-family: 'Roboto', sans-serif;
+  border: 0;
+  padding: 12px 12px;
+  width: max-content;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin: 12px auto;
+}
+
+input {
+  border: 2px solid black;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  padding: 4px;
+}
+
+.Resume {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Rendered {
+  margin-top: 100px;
+  background-color: #fdfeff;
+  min-height: 1000px;
+  height: fit-content;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  height: 140px;
+  width: 100%;
+  background-color: #5E81AC;
+  font-family: 'Roboto', sans-serif;
+}
+
+.name {
+  text-align: center;
+  font-size: 36px;
+  padding-top: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+
+
+.topInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  font-size: 22px;
+  font-weight: 500;
+  background-color: #5E81AC;
+}
+
+.email {
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 22px;
+  font-weight: 500;
+}
+
+h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.objective {
+  text-align: center;
+  margin: 10px 70px;
+  font-size: 19px;
+}
+
+.bottom {
+  width: 100%;
+  height: max-content;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.Work {
+  margin-bottom: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+h3:first-child {
+  text-decoration: underline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Work > div > div:first-child {
+  font-size: 20px;
+  font-weight: 500;
+  display: inline;
+  text-decoration: underline;
+}
+
+.Work > div > div:nth-child(2) {
+  display: inline;
+  margin-left: 12px;
+  font-size: 18px;
+}
+.Work > div > div:nth-child(2)::after {
+  content: ' - ';
+}
+
+.Work > div > div:nth-child(3) {
+  display: inline;
+  font-size: 18px;
+}
+
+.Work > div > div:last-child {
+  margin-top: 10px;
+  text-align: center;
+}
+.Work > div > div {
+  font-size: 18px;
+}
+
+.workInfo {
+  width: 50%;
+}
+
+.edu {
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.edu > div > div:first-child {
+  font-size: 20px;
+  font-weight: 500;
+  display: inline;
+  text-decoration: underline;
+}
+
+.edu > div > div:nth-child(2) {
+  display: inline;
+  margin-left: 12px;
+  font-size: 18px;
+}
+.edu > div > div:nth-child(2)::after {
+  content: ' - ';
+}
+
+.edu > div > div:nth-child(3) {
+  display: inline;
+  font-size: 18px;
+}
+
+.edu > div > div {
+  font-size: 18px;
+  text-align: center;
 }
